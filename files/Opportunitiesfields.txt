@@ -1,0 +1,99 @@
+'fldHKu8VCZaz8PG0E': salesforceRecord. ,// 401(k) Plan - singleSelect
+'fld5Xrg5HbELvbpzZ': salesforceRecord. ,// 401k Notes - multilineText
+'fldNTvTCkJ8jFfX41': salesforceRecord. ,// Account - multipleRecordLinks
+'fldHIjiLZEF0Nyp5C': salesforceRecord. ,// Account Record ID - multipleLookupValues
+'fldVvTKEDx5mbBwkj': salesforceRecord. ,// Add 401(k) Notes? - checkbox
+'fldj570q4crZM05In': salesforceRecord. ,// Add Benefits Notes? - checkbox
+'fldvadKt3cgHqqcja': salesforceRecord. ,// Add Dental Notes? - checkbox
+'fldl4dRaqlyfsaC69': salesforceRecord. ,// Add HR Notes? - checkbox
+'fld80zKMnlV8m2656': salesforceRecord. ,// Add Payroll Notes? - checkbox
+'fldr2LntyDcvc1VmN': salesforceRecord. ,// Add Vision Notes? - checkbox
+'fldmzVDXZ7msKVOef': salesforceRecord. ,// Add WC Notes? - checkbox
+'fldxyBLcMKmhpRqTE': salesforceRecord. ,// Appointment Date - dateTime
+'fldqjcsaEg7gvGinS': salesforceRecord. ,// Appointment? - checkbox
+'fldKIfizlTpFzVOG3': salesforceRecord. ,// Benefits Notes - multilineText
+'fldAczIacnyEXbbQ3': salesforceRecord. ,// Client 401(k) Carrier - singleLineText
+'fldPUv4Dm1IIZMklx': salesforceRecord. ,// Client Dental Carrier - singleLineText
+'fldYueOFUMLL5lFzY': salesforceRecord. ,// Client Dental Carrier Connect? - checkbox
+'fldrMIiNqI0JeXHN7': salesforceRecord. ,// Client Health Carrier - singleLineText
+'fld2QPQ2NAEc54CUA': salesforceRecord. ,// Client Health Connector? - checkbox
+'fldpOkwAVTESSrMac': salesforceRecord. ,// Client Vision Carrier - singleLineText
+'fldt37LBUUTViyjSc': salesforceRecord. ,// Client Vision Connector? - checkbox
+'fldTEouLLYzizo4TM': salesforceRecord. ,// Client WC Carrier - singleLineText
+'fld6UJDLeusOcu9rC': salesforceRecord. ,// Clients 401k Plan - multipleRecordLinks
+'fld3sPTnEBhOnImOd': salesforceRecord. ,// Clients 401k? - checkbox
+'fldZfGaTb56huJXPC': salesforceRecord. ,// Clients Dental Plan - multipleRecordLinks
+'fldH3z3DTFxCm05lH': salesforceRecord. ,// Clients Dental? - checkbox
+'fldoifq0AmCZNZCqp': salesforceRecord. ,// Clients Health Plan - multipleRecordLinks
+'fld7CWyrZS8O1hWzd': salesforceRecord. ,// Clients Health? - checkbox
+'fldXU5OucF6im5ijW': salesforceRecord. ,// Clients Vision Plan - multipleRecordLinks
+'fldBgT5hVTmXqlHKg': salesforceRecord. ,// Clients Vision? - checkbox
+'fldYa7EQYWMCXffKK': salesforceRecord. ,// Clients Workers Comp? - checkbox
+'fldJSauXiZyO0U290': salesforceRecord. ,// Commercial Auto? - checkbox
+'fld7RiZDHcuOMMdkg': salesforceRecord. ,// Competitor - multipleRecordLinks
+'fld0ykccmw38CyNoG': salesforceRecord. ,// Contact - multipleRecordLinks
+'fldP3Nrs89berAxki': salesforceRecord. ,// Contract Sent Date - dateTime
+'fldiRxEGevQwImNnt': salesforceRecord. ,// Contract Sent? - checkbox
+'fld7lXkdlEhIj93Ze': salesforceRecord. ,// Contract Signed Date - dateTime
+'fldeRGV7XFuz6WtWY': salesforceRecord. ,// Created Date - createdTime
+'fldBXAkr96rGQtFUx': salesforceRecord. ,// Dental Benefits - singleSelect
+'fldStQ6GMHL3CGs9x': salesforceRecord. ,// Dental Notes - multilineText
+'fld7GBqGlaJcnX99X': salesforceRecord. ,// Directors & Officers Liability? - checkbox
+'fldSEDUMAJIqPxbZl': salesforceRecord. ,// EE Estimate - multipleLookupValues
+'fldGOr5hoIMcP3c41': salesforceRecord. ,// EEs Actual (from Account) - multipleLookupValues
+'fldY8HsZ2LnGixDhA': salesforceRecord. ,// Effective Date - dateTime
+'fldJlpKxkIXEnmlQn': salesforceRecord. ,// EPLI Insurance? - checkbox
+'fld0DWQJasB7k0VmF': salesforceRecord. ,// EPLI Notes - multilineText
+'fld0uQjuGHqPOFxNa': salesforceRecord. ,// General Liability? - checkbox
+'fld8kkVABTP31McCw': salesforceRecord. ,// GHQ - singleLineText
+'fldyPrLGP423b21SG': salesforceRecord. ,// Goal Start Date - date
+'fld0DugLpbQ4iYKnc': salesforceRecord. ,// HR Notes - multilineText
+'fldUfTMCOvSsfG6H8': salesforceRecord. ,// HR Services - multipleRecordLinks
+'fldbeiJLTq4AHEN8N': salesforceRecord. ,// HR? - checkbox
+'fldJErlMiJ2Hd71bg': salesforceRecord. ,// HRIS Module - multipleRecordLinks
+'fldt9L6MkJnF5GkcJ': salesforceRecord. ,// Life Insurance? - checkbox
+'fldArLB7QgQyDN1kl': salesforceRecord. ,// Master 401k Plan - multipleRecordLinks
+'fldarsIPB9Yw4c0js': salesforceRecord. ,// Master 401k? - checkbox
+'fldi2cJIp3TpLTHDX': salesforceRecord. ,// Master Dental Plan - multipleRecordLinks
+'fldURWtrzrhHu40Cr': salesforceRecord. ,// Master Dental? - checkbox
+'fldiX28d5ccHT8D8M': salesforceRecord. ,// Master Health Plan - multipleRecordLinks
+'fldkKoZ5re422uf2v': salesforceRecord. ,// Master Health? - checkbox
+'fldzPiYnhJFXJo9Wv': salesforceRecord. ,// Master Vision Plan - multipleRecordLinks
+'fldnJGMm1v0JKJn6N': salesforceRecord. ,// Master Vision? - checkbox
+'fldREYucEX1kxnsf4': salesforceRecord. ,// Master Workers Comp? - checkbox
+'fldxTaheAhIAfFB4Q': salesforceRecord. ,// Medical Benefits - singleSelect
+'fld6SiggKwWmYnU3x': salesforceRecord. ,// Medicare? - checkbox
+'fldE8lBN8kmLE57Fo': salesforceRecord. ,// Name - formula
+'fldRzYtOKxBoAjC71': salesforceRecord. ,// Opportunity Line Items - multipleRecordLinks
+'fldoi6lWHEL6QzckS': salesforceRecord. ,// Opportunity Type - multipleLookupValues
+'fldIV4ISA5B5FgvGu': salesforceRecord. ,// Owner - multipleRecordLinks
+'fldppSsWnCWJ1EOUq': salesforceRecord. ,// Payroll Cycles - multipleRecordLinks
+'fldh1LhbepIdHKcSw': salesforceRecord. ,// Payroll Features - multipleRecordLinks
+'fldllhcE1nv79hnRS': salesforceRecord. ,// Payroll Frequency - multipleSelects
+'fldeCQnZnv0ydygwa': salesforceRecord. ,// Payroll Notes - multilineText
+'fldYREx9IMN4paGhN': salesforceRecord. ,// Payroll Platform - singleLineText
+'flduBSsCchCNn3pso': salesforceRecord. ,// Payroll Services - multipleRecordLinks
+'fldZz4GIGIAeqo25G': salesforceRecord. ,// Payroll Services copy - singleLineText
+'fldMZXvhIQGEK5PvO': salesforceRecord. ,// Payroll Services copy - singleLineText
+'fldctSEMvSeZhsaSz': salesforceRecord. ,// Payroll? - checkbox
+'fldXrhvuMCNmuarlk': salesforceRecord. ,// PEO History? - checkbox
+'fldwNzWQMYErSkPyv': salesforceRecord. ,// Professional Liability? - checkbox
+'flduukMzFedTAiqJX': salesforceRecord. ,// Projected Runway - formula
+'flduVctBsOtHEgkDR': salesforceRecord. ,// Property Insurance? - checkbox
+'fld09znLYcwu9cd4d': salesforceRecord. ,// Quote Sent Date - dateTime
+'fldKhWyz4FdzT4vL3': salesforceRecord. ,// Quote Sent? - checkbox
+'fldxYQPrx6uaBdf72': salesforceRecord. ,// Rate (from Opportunity Line Items) - multipleLookupValues
+'fldfccO88fPwYauWE': salesforceRecord. ,// Retirement Planning? - checkbox
+'fldz2d59Ue5ecgCWx': salesforceRecord. ,// Send Census - checkbox
+'fld6TNWORYqDh9nXg': salesforceRecord. ,// Send Finley Stokes - checkbox
+'fldYPZyNI7AaJt2zs': salesforceRecord. ,// Send GHQ - checkbox
+'flduUvOp9Nf3wmltX': salesforceRecord. ,// Services - singleLineText
+'fldO3jjS9HQW7d6c4': salesforceRecord. ,// Stage - singleSelect
+'fldA67ocB1wl1coWh': salesforceRecord. ,// State(s) - multipleLookupValues
+'fldFbhqnNsUBzoOH7': salesforceRecord. ,// TLM Module - multipleRecordLinks
+'fldR2M4SqQtc14Xzh': salesforceRecord. ,// Type - singleSelect
+'fldZL9d4SoRrfDdGH': salesforceRecord. ,// Vision Benefits - singleSelect
+'fldLp5kDiNwPvb3DH': salesforceRecord. ,// Vision Notes - multilineText
+'fldf7UTupapzvFRio': salesforceRecord. ,// WC Notes - multilineText
+'fld3DgiluTZGmM68z': salesforceRecord. ,// Workers Comp - multipleRecordLinks
+'fld1adUdIfJrx95e6': salesforceRecord. ,// Workers Compensation Insurance - singleSelect

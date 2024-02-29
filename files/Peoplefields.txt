@@ -1,0 +1,53 @@
+'fldVkmvagw4p8GIeR': salesforceRecord. ,// # Interactions - count
+'fldZVQgRWknn5cq0r': salesforceRecord. ,// Account - multipleRecordLinks
+'fld5gCRNAFvxnOzNl': salesforceRecord. ,// Account ID - singleLineText
+'fldhRiiAPJGRZo0UZ': salesforceRecord. ,// Account Record ID - multipleLookupValues
+'fldkKJ4AwlBnQpKi6': salesforceRecord. ,// Accounts - singleLineText
+'fldnnskiKL8bcmB6W': salesforceRecord. ,// Active - singleSelect
+'fldykIz9T5rNEaGi3': salesforceRecord. ,// Cases - multipleRecordLinks
+'fldsS8mS3lsrFcoNo': salesforceRecord. ,// Company Name - singleLineText
+'fldJzmOd1Yk4Uwpll': salesforceRecord. ,// Contact ID - singleLineText
+'fldF1rG8CZAqFSylM': salesforceRecord. ,// Contact Owner - multipleRecordLinks
+'fldep8hKBxwZTqp6t': salesforceRecord. ,// Contact Owner (for Automation) - singleLineText
+'fldfZe5XfGjvv3YsZ': salesforceRecord. ,// Contact Role (Department) - multipleSelects
+'fld0nxmTBVf8pTHuf': salesforceRecord. ,// Created Date - createdTime
+'fldWn0eYY1FUWULpk': salesforceRecord. ,// Current Age - formula
+'fld25NZQ1YUzFynWj': salesforceRecord. ,// DOB - date
+'fldWwKXieCpV64IqV': salesforceRecord. ,// Email - email
+'fldsZ0cZejdYCde2k': salesforceRecord. ,// First Name - singleLineText
+'fldJzHSikKJqQhFD2': salesforceRecord. ,// Headshot - multipleAttachments
+'fldBMshRWnE0DnCG3': salesforceRecord. ,// Interactions - multipleRecordLinks
+'fldNPHw4MOHF4qi4g': salesforceRecord. ,// Job Title - singleLineText
+'fldVP4leZcDu3wDn2': salesforceRecord. ,// Last Lead Status Change Date - lastModifiedTime
+'fld7DsK85Nx5SxoAs': salesforceRecord. ,// Last Modified Date - lastModifiedTime
+'fldziAIrqHr2JOLTC': salesforceRecord. ,// Last Name - singleLineText
+'fldmM7hB6rqFUyKTS': salesforceRecord. ,// Lead Stage - singleSelect
+'fldBKFXQGYL2NKNNl': salesforceRecord. ,// LinkedIn - url
+'fldxTVU79PaGgdMsv': salesforceRecord. ,// Location - multipleRecordLinks
+'fldiLlR7VdepoZlKK': salesforceRecord. ,// Mailing Address 1 - singleLineText
+'fldpKG1mUyen2XpYw': salesforceRecord. ,// Mailing Address 2 - singleLineText
+'fldUhqnjCDGer98Zg': salesforceRecord. ,// Mailing Address 3 - singleLineText
+'fldfVvlqblrADHlnJ': salesforceRecord. ,// Mailing City - singleLineText
+'fldDK8Vyyk5l3e1pS': salesforceRecord. ,// Mailing State - singleLineText
+'fldjoVLdFvDR8EsZw': salesforceRecord. ,// Mailing Street - singleLineText
+'fldzhdv1B8UcCELGJ': salesforceRecord. ,// Mailing Zip/Postal Code - singleLineText
+'fldJSKv2In3mzejKw': salesforceRecord. ,// Middle Name - singleLineText
+'fldcl7Qbvyuges0NW': salesforceRecord. ,// Mobile Phone - phoneNumber
+'fldMcB1n1Ib3zxw6y': salesforceRecord. ,// Name - formula
+'fldPhQLPU6ZSNLCum': salesforceRecord. ,// Notes - multipleRecordLinks
+'fldRtdHkXmP1I6VDA': salesforceRecord. ,// Opportunities - multipleRecordLinks
+'fldojhDaRXr5eyWnu': salesforceRecord. ,// Owner? - checkbox
+'fldEtKheOqQDSgGbp': salesforceRecord. ,// Ownership - singleLineText
+'fldm8pD5VKje7Yj6B': salesforceRecord. ,// Ownership Percentage - percent
+'fldo9bigqdFOZ1jDB': salesforceRecord. ,// Partner - multipleRecordLinks
+'fldaW8hWjYVjY2EhM': salesforceRecord. ,// Phone - phoneNumber
+'fldamJuRBGsmZn1ZI': salesforceRecord. ,// Phone - Ready to Dial - formula
+'fldCYzt17ljHdNowH': salesforceRecord. ,// Portal Last Accessed - date
+'fldrG3XTXAyhae5PC': salesforceRecord. ,// Portal Magic Link - url
+'fldU37Fr4AczKBjVe': salesforceRecord. ,// Portal User Created - date
+'fldIZlSla6uwFHMzE': salesforceRecord. ,// Prefix - singleSelect
+'fld8h5owOw4Rr7iVI': salesforceRecord. ,// Record ID - formula
+'fldhZHoZHLuCBiQfe': salesforceRecord. ,// Sales Role - multipleSelects
+'fld28jYB15pC657As': salesforceRecord. ,// Suffix - singleSelect
+'fldtCHNLy25kMKcfl': salesforceRecord. ,// Terminated Date - dateTime
+'fldIJJDcdHxJhcOL2': salesforceRecord. ,// Type - singleSelect

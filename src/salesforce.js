@@ -1,4 +1,5 @@
 const jsforce = require('jsforce');
+const fs = require('fs');
 
 // Load environment variables
 require('dotenv').config(); // Assuming you have dotenv installed
@@ -16,7 +17,7 @@ const conn = new jsforce.Connection({
         clientId: clientId,
         clientSecret: clientSecret,
         loginUrl: loginUrl,
-    }
+    }, version: '58.0'
 });
 
 // Function to authenticate and return a connected instance
@@ -32,20 +33,28 @@ async function login() {
 
 // Function to execute a SOQL query and return results in batches
 async function querySalesforce(soqlQuery, batchSize = 2000) {
-    let records = [];
-    let done = false;
-    let nextRecords;
+    const records = [];
+    const errors = [];
 
-    while (!done) {
-        nextRecords = await conn.query(soqlQuery);
-        records = records.concat(nextRecords.records);
-        done = nextRecords.done;
-        if (!done) {
-            soqlQuery = `SOQL_QUERY { FOLLOWING OFFSET ${nextRecords.nextRecordsUrl.substr(nextRecords.nextRecordsUrl.indexOf('=') + 1)} }`;
-        }
-    }
+    return new Promise((resolve, reject) => {
+    var query = conn.query(soqlQuery)
+        .on("record", function (record) {
+            records.push(record);
+        })
+        .on("end", function () {
+            console.log("total in database : " + query.totalSize);
+            console.log("total fetched : " + query.totalFetched);
+            resolve({ records, errors });
+        })
+        .on("error", function (err) {
+            console.error(err);
+            errors.push(err);
+            reject(errors);
+        })
+        .run({ autoFetch: true, maxFetch: batchSize }); // synonym of Query#execute();
 
-    return records;
+    });
+
 }
 
 // Function to execute a SOQL query in Bulk and save the result to a csv file
@@ -57,39 +66,177 @@ async function querySalesforceToCsv(soqlQuery, filePath) {
 }
 
 async function bulkQuerySalesforce(soqlQuery) {
-    conn.bulk.query(soqlQuery)
-        .on('record', function (rec) { console.log(rec); })
-        .on('error', function (err) { console.error(err); });
+    const records = [];
+    const errors = [];
+
+    return new Promise((resolve, reject) => {
+        conn.bulk.query(soqlQuery)
+            .on('record', function (rec) {
+                records.push(rec);
+            })
+            .on('error', function (err) {
+                console.error(err);
+                errors.push(err);
+                reject(errors);
+            })
+            .on('finish', function () {
+                resolve({ records, errors });
+            });
+
+    });
 }
+
+async function downloadContent(cvRecord) {
+    try {
+        const folderName = 'downloads/' + cvRecord.Id;
+        if (!fs.existsSync(folderName)) {
+            fs.mkdirSync(folderName);
+        }
+        const fileName = folderName + '/' + cvRecord.PathOnClient;
+
+        const fileOut = fs.createWriteStream(fileName);
+        await conn.sobject('ContentVersion').record(cvRecord.Id).blob('VersionData').pipe(fileOut); // Await the completion of pipe
+        console.log(`Content downloaded to: ${fileName}`);
+    } catch (error) {
+        console.error('Error downloading content:', error);
+        throw error; // Re-throw for handling in calling code
+    }
+}
+
+async function queryMetadata() {
+    var fullNames = ['Account', 'Contact', 'Lead', 'Opportunity', 'Case'];
+    conn.metadata.read('CustomObject', fullNames, function (err, metadata) {
+        if (err) { console.error(err); }
+        for (var i = 0; i < metadata.length; i++) {
+            var meta = metadata[i];
+            let request = {};
+            request.name = meta.fullName;
+            let idField = [{
+                name: "Salesforce Id",
+                type: "singleLineText",
+                description: 'Field for Id'
+            }];
+            let mappedFields = meta.fields.map((field) => {
+                return addOptions({
+                    name: field.label || field.fullName,
+                    type: getAirtableFiedlType(field.type),
+                    description: 'Field for ' + field.fullName
+                })
+            });
+
+
+            request.fields = [...idField, ...mappedFields];
+
+            let salesforceFields = request.fields.map(field => field.description.replace(/^Field for /, '')).join(",\n");
+
+
+            console.log("Full Name: " + meta.fullName);
+            console.log(hasDuplicateNames(request.fields));
+            // let undefinedFields = meta.fields.filter((field) => field.type === undefined);
+            // console.log(undefinedFields);
+            var createAirtableFile = fs.createWriteStream('files/' + meta.fullName + '.json');
+            createAirtableFile.write(JSON.stringify(request));
+            createAirtableFile.end();
+
+            var salesforceQueryFile = fs.createWriteStream('src/queries/' + meta.fullName + 'Query.js');
+            salesforceQueryFile.write("const query = `select \n" + salesforceFields + " \nfrom " +
+                meta.fullName + "`; \n\nexports." + meta.fullName.toLowerCase() + "Query = query;");
+            salesforceQueryFile.end();
+            // const distinctTypes = [...new Set(meta.fields.map(field => field.type))];
+            // console.log(distinctTypes);
+            //console.log("Sharing Model: " + meta.sharingModel);
+        }
+    });
+}
+
+function addOptions(field) {
+    switch (field.type) {
+        case "checkbox":
+            field.options = { color: "greenBright", icon: "check" };
+            break;
+        case "singleSelect":
+            field.options = { choices: [] };
+            break;
+        case "multipleSelects":
+            field.options = { choices: [] };
+            break;
+        case "dateTime":
+            field.options = { timeZone: "America/New_York", dateFormat: { name: "local" }, timeFormat: { name: "24hour" } };
+            break;
+        case "date":
+            field.options = { dateFormat: { name: "local" } };
+            break;
+        case "number":
+            field.options = { precision: 0 };
+            break;
+        case "percent":
+            field.options = { precision: 2 };
+            break;
+        case "currency":
+            field.options = { precision: 0, symbol: "$" };
+            break;
+    }
+
+    return field;
+}
+
+function getAirtableFiedlType(fieldType) {
+    const fieldTypeMapping = {
+        'Text': 'singleLineText',
+        'Checkbox': 'checkbox',
+        'Picklist': 'singleSelect',
+        'MultiselectPicklist': 'multipleSelects',
+        'TextArea': 'multilineText',
+        'Phone': 'phoneNumber',
+        'Number': 'number',
+        'Percent': 'percent',
+        'Url': 'url',
+        'Html': 'richText',
+        'DateTime': 'dateTime',
+        'Date': 'date',
+        'Lookup': 'singleLineText',
+        'LongTextArea': 'multilineText',
+        'Hierarchy': 'singleLineText',
+        'Currency': 'currency',
+        'Email': 'email'
+    };
+
+    return fieldTypeMapping[fieldType] || 'singleLineText';
+}
+
+function hasDuplicateNames(arrayOfObjects) {
+    const nameCount = {};
+    let duplicateCounts = 0;
+    for (const obj of arrayOfObjects) {
+        const name = obj.name;
+        if (nameCount[name]) {
+            console.log('Duplicate field - ' + name);
+            duplicateCounts++;
+        } else {
+            nameCount[name] = (nameCount[name] || 0) + 1;
+        }
+    }
+
+    return duplicateCounts > 0;
+}
+
+/**
+ * Ensure that a folder exists
+ * @param {string} folderPath
+ */
+async function ensureFolder(folderPath) {
+    try {
+      await mkdir(folderPath);
+    } catch (e) {}
+  }
 
 // Additional functions for specific error handling and data processing can be added here
 
 module.exports = {
     login,
     querySalesforce,
+    downloadContent,
+    queryMetadata,
     bulkQuerySalesforce,
     querySalesforceToCsv,
 };
-
-/*
-var username = 'dipo.majekodunmi@wise-fox-d3dzw0.com';
-var password = 'RS6!zVU0W9MIBqQx';
-var securityToken = '5KDixp8rdxxlmz0odns5WdDn';
-conn.login(username, password + securityToken, function (err, userInfo) {
-    if (err) { return console.error(err); }
-    // Now you can get the access token and instance URL information.
-    // Save them to establish connection next time.
-    console.log(conn.accessToken);
-    console.log(conn.instanceUrl);
-    //console.log(conn.refreshToken);
-    // logged in user property
-    console.log("User ID: " + userInfo.id);
-    console.log("Org ID: " + userInfo.organizationId);
-    // ...
-
-   
-    conn.bulk.query("SELECT Id, Name, NumberOfEmployees FROM Account")
-        .stream().pipe(fs.createWriteStream('./accounts.csv'));
-});
-
-*/

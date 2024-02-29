@@ -1,0 +1,8 @@
+'fldv6jLSPU2jdbebh': salesforceRecord. ,// Account - multipleRecordLinks
+'fldOQveQjJiHrRRYc': salesforceRecord. ,// Account Record ID - multipleLookupValues
+'fldjNLiBlHeGbbpM2': salesforceRecord. ,// Attachment - multipleAttachments
+'fldMTGPRVZR6HfBFc': salesforceRecord. ,// Created - createdTime
+'fldjzHp8C65l6msxK': salesforceRecord. ,// Document Name (manual) - singleLineText
+'fldgzKJk2ecLSY4Pk': salesforceRecord. ,// Document Type - multipleRecordLinks
+'fld64zQsOgKTTRNA7': salesforceRecord. ,// Name - formula
+'fldKlRrcD7fvPGvwy': salesforceRecord. ,// Status - singleSelect

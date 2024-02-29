@@ -1,8 +1,19 @@
 const Airtable = require('airtable');
+const fs = require('fs');
 
 // Load environment variable for Airtable API key
 require('dotenv').config(); // Assuming you have dotenv installed
 const cleaner = require('fast-clean');
+const { accountMapper } = require('./mapping/accountMapping');
+const { contactMapper } = require('./mapping/contactMapping');
+const { caseMapper } = require('./mapping/caseMapping');
+const { leadMapper } = require('./mapping/leadMapping');
+const { opportunityMapper } = require('./mapping/opportunityMapping');
+const { contentdocumentlinkMapper } = require('./mapping/contentdocumentlinkMapping');
+const { contentdocumentMapper } = require('./mapping/contentdocumentMapping');
+const { contentversionMapper } = require('./mapping/contentversionMapping');
+const { resolve } = require('path');
+const { error } = require('console');
 
 const airtableEndpointUrl = process.env.AIRTABLE_ENDPOINT_URL;
 const airtableApiKey = process.env.AIRTABLE_API_KEY;
@@ -29,52 +40,134 @@ function getAddressesFromAccount(records) {
 
 async function upsertAccountsFromSalesforce(accountRecords) {
   accountsCache.length = 0;
-  let addressTable = 'tblZJ40eBmvTO6MXa';
-  let accountTable = 'tblxZYB1Q6FY3hQGt';
-
-  let addressOptions = {
-    "typecast": true,
-    "performUpsert": {
-      "fieldsToMergeOn": [
-        "fldk4xCjVYuy8Td1s",
-        "fldqjJ2HoCbdz0IKn"
-      ]
-    }
-  };
-
+  // let addressTable = 'tblZJ40eBmvTO6MXa';
+  let accountTable = 'tblG1WDA9dkHYBHBJ';
   let accountOptions = {
     "typecast": true,
     "performUpsert": {
       "fieldsToMergeOn": [
-        "fldiAd2DHJLgDa5xz"
+        "fldzsLQHGYeFcXBXZ"
       ]
     }
   };
 
-  let accountBatch = [];
-  let addressBatch = [];
+  await upsertAirtableRecords(accountTable, accountRecords, accountOptions, mapAccountData, handleAccountUpserts, handleError);
+
+}
+
+async function upsertContactsFromSalesforce(contactRecords) {
+  let tableId = 'tblFycun4bpUYqufm';
+  let options = {
+    "typecast": true,
+    "performUpsert": {
+      "fieldsToMergeOn": [
+        "fldjiSQYgrsigtJVp"
+      ]
+    }
+  };
+
+  await upsertAirtableRecords(tableId, contactRecords, options, mapContactData, handleContactUpserts, handleError);
+}
+
+async function upsertCasesFromSalesforce(caseRecords) {
+  let tableId = 'tbljdWbH5K7DOvxhk';
+  let options = {
+    "typecast": true,
+    "performUpsert": {
+      "fieldsToMergeOn": [
+        "fld7PWz4wBZrb8Xsk"
+      ]
+    }
+  };
+
+  await upsertAirtableRecords(tableId, caseRecords, options, mapCaseData, handleCaseUpserts, handleError);
+}
+
+async function upsertLeadsFromSalesforce(leadRecords) {
+  let tableId = 'tblaJ4tS8s63besTQ';
+  let options = {
+    "typecast": true,
+    "performUpsert": {
+      "fieldsToMergeOn": [
+        "fldiFy858g0myfKLf"
+      ]
+    }
+  };
+
+  await upsertAirtableRecords(tableId, leadRecords, options, mapLeadData, handleLeadUpserts, handleError);
+}
+
+async function upsertOpportunitiesFromSalesforce(opportunityRecords) {
+  let tableId = 'tblALbYhz7WNaSptH';
+  let options = {
+    "typecast": true,
+    "performUpsert": {
+      "fieldsToMergeOn": [
+        "fldDfVoxLwK50sydS"
+      ]
+    }
+  };
+
+  await upsertAirtableRecords(tableId, opportunityRecords, options, mapOpportunityData, handleOpportunityUpserts, handleError);
+}
+
+async function upsertContentDocumentsFromSalesforce(contentDocumentRecords) {
+  let tableId = 'tblgBCzwWAi4J9mbg';
+  let options = {
+    "typecast": true,
+    "performUpsert": {
+      "fieldsToMergeOn": [
+        "flduu7Law2tq0MtD2"
+      ]
+    }
+  };
+
+  await upsertAirtableRecords(tableId, contentDocumentRecords, options, mapContentDocumentData, handleUpserts, handleError);
+}
+
+async function upsertContentDocumentLinksFromSalesforce(contentDocumentLinkRecords) {
+  let tableId = 'tblKY7NtscIHODYAz';
+  let options = {
+    "typecast": true,
+    "performUpsert": {
+      "fieldsToMergeOn": [
+        "fldQIzxwvZqldge0T"
+      ]
+    }
+  };
+
+  await upsertAirtableRecords(tableId, contentDocumentLinkRecords, options, mapContentDocumentLinkData, handleUpserts, handleError);
+}
+
+async function upsertContentVersionsFromSalesforce(contentVersionRecords) {
+  let tableId = 'tblnG8JLRzCFijJ7x';
+  let options = {
+    "typecast": true,
+    "performUpsert": {
+      "fieldsToMergeOn": [
+        "flddemB9k9saRQK0N"
+      ]
+    }
+  };
+
+  await upsertAirtableRecords(tableId, contentVersionRecords, options, mapContentVersionData, handleUpserts, handleError);
+}
+
+
+
+async function upsertAirtableRecords(tableId, records, options, mapper, onSuccess, onError) {
+  let batch = [];
   let batchSize = 10;
   // // upsert the accounts
-  for (let i = 0; i < accountRecords.length; i += batchSize) {
-    accountBatch = accountRecords.slice(i, i + batchSize);
-    let accounts = accountBatch.map(mapAccountData);
-    await base(accountTable).update(accounts, accountOptions)
-      .then(handleAccountUpserts)
-      .catch(handleError);
-
-    let addressRecords = getAddressesFromAccount(accountBatch);
-    for (let j = 0; j < addressRecords.length; j += batchSize) {
-      let addressBatch = addressRecords.slice(j, j + batchSize);
-      await base(addressTable).update(addressBatch, addressOptions)
-        .then(handleAddressUpserts)
-        .catch(handleError);;
-    }
+  for (let i = 0; i < records.length; i += batchSize) {
+    batch = records.slice(i, i + batchSize);
+    let data = batch.map(mapper);
+    await base(tableId).update(data, options)
+      .then(onSuccess)
+      .catch(onError);
   }
 }
 
-async function upsertAirtableRecords(tableId, records, options) {
-  return base(tableId).update(batch, options);
-}
 
 
 // Additional functions for specific data transformations or error handling can be added here
@@ -83,18 +176,38 @@ function handleAddressUpserts(records) {
   console.log(records.length + ' address records upserted');
 }
 
+function handleContactUpserts(records) {
+  console.log(records.length + ' contact records upserted');
+}
+
+function handleCaseUpserts(records) {
+  console.log(records.length + ' case records upserted');
+}
+
+function handleLeadUpserts(records) {
+  console.log(records.length + ' lead records upserted');
+}
+
+function handleOpportunityUpserts(records) {
+  console.log(records.length + ' opportunity records upserted');
+}
+
 function handleAccountUpserts(records) {
 
-  accountsCache = accountsCache.concat(records.map((record) => {
-    return {
-      salesforceRecordId: record.fields.SalesforceId,
-      airtableRecordId: record.id
-    }
-  })
-  );
+  // accountsCache = accountsCache.concat(records.map((record) => {
+  //   return {
+  //     salesforceRecordId: record.fields.SalesforceId,
+  //     airtableRecordId: record.id
+  //   }
+  // })
+  // );
 
   console.log(records.length + ' account records upserted');
 
+}
+
+function handleUpserts(records) {
+  console.log(records.length + ' records upserted');
 }
 
 function handleError(err) {
@@ -110,21 +223,39 @@ function getAirtableIdBySalesforceId(salesforceId) {
 }
 
 function mapAccountData(salesforceRecord) {
-  let mappedData = {
-    fields: {
-      'fldjoTOIRqMhEpDIS': salesforceRecord.Name, // Name - Text
-      'fldEbXvKqeNXBER5a': salesforceRecord.Description, // Description - Long text
-      'fldZQyxccUM72SdSV': salesforceRecord.Type, // Type - Single Select
-      'fldnKlbGlSn8kQCb2': salesforceRecord.Active__c, // Status - Single select
-      'fldiAd2DHJLgDa5xz': salesforceRecord.Id, // SalesforceId - Text
-      'fldE2uInnbjU1dd2r': salesforceRecord.NumberOfEmployees, // NumberOfEmployees - Number
-      'flddfrVaTpRswXdH9': salesforceRecord.Phone, // Phone - phone number
-      'fldnJ1vgAUMqPDRjE': salesforceRecord.BillingAddress, // BillingAddress - Linked record
-      'fldErzv3F9yLUam1a': salesforceRecord.ShippingAddress, // ShippingAddress - Linked record
-    }
-  }
+  return mapAndCleanFields(accountMapper(salesforceRecord));
+}
 
-  return cleaner.clean(mappedData, { nullCleaner: true, cleanInPlace: true });
+function mapContactData(salesforceRecord) {
+  return mapAndCleanFields(contactMapper(salesforceRecord));
+}
+
+function mapCaseData(salesforceRecord) {
+  return mapAndCleanFields(caseMapper(salesforceRecord));
+}
+
+function mapLeadData(salesforceRecord) {
+  return mapAndCleanFields(leadMapper(salesforceRecord));
+}
+
+function mapOpportunityData(salesforceRecord) {
+  return mapAndCleanFields(opportunityMapper(salesforceRecord));
+}
+
+function mapContentDocumentData(salesforceRecord) {
+  return mapAndCleanFields(contentdocumentMapper(salesforceRecord));
+}
+
+function mapContentDocumentLinkData(salesforceRecord) {
+  return mapAndCleanFields(contentdocumentlinkMapper(salesforceRecord));
+}
+
+function mapContentVersionData(salesforceRecord) {
+  return mapAndCleanFields(contentversionMapper(salesforceRecord));
+}
+
+function mapAndCleanFields(recordFields) {
+  return cleaner.clean({fields: recordFields}, { nullCleaner: true, cleanInPlace: true });
 }
 
 function mapAddressData(salesforceRecordId, addressType, address) {
@@ -154,7 +285,32 @@ function mapAddressData(salesforceRecordId, addressType, address) {
   return cleaner.clean(mappedData, { nullCleaner: true, cleanInPlace: true });
 }
 
+async function getAirtableTables() {
+  let url = airtableEndpointUrl + '/v0/meta/bases/' + airtableBase + '/tables';
+  let options = {
+    method: 'GET',
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + airtableApiKey,
+    }
+  }
+  return new Promise((resolve, reject) => {
+    fetch(url, options)
+    .then(res => resolve(res.json()))
+    .catch(err => reject(err));
+  });
+}
+
+
 module.exports = {
+  getAirtableTables,
   upsertAccountsFromSalesforce,
+  upsertContactsFromSalesforce,
+  upsertCasesFromSalesforce,
+  upsertLeadsFromSalesforce,
+  upsertOpportunitiesFromSalesforce,
+  upsertContentDocumentLinksFromSalesforce,
+  upsertContentDocumentsFromSalesforce,
+  upsertContentVersionsFromSalesforce,
   upsertAirtableRecords,
 };

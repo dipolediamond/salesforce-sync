@@ -1,0 +1,227 @@
+'fldhGWO8CfDdVi6Q8': salesforceRecord. ,// # Contacts - count
+'fldNZaiwGBWex0pSt': salesforceRecord. ,// # FEINs - formula
+'fldT4GLeR8H6fiw59': salesforceRecord. ,// # Locations - count
+'fldBUn1gacdUYCJhM': salesforceRecord. ,// # Pay Cycles - count
+'fldMZJ89UuBZS9QQ3': salesforceRecord. ,// # States - count
+'fld8R1OEIZXv2i2np': salesforceRecord. ,// # Subsidiaries - count
+'fld3qlsIkAeTR0bJk': salesforceRecord. ,// 3rd Party Ancillary Benefits - multipleRecordLinks
+'fldKtwcwLLOCBJ3fo': salesforceRecord. ,// 3rd Party Health Benefits - multipleRecordLinks
+'fld1CRtAHrwRUYtk9': salesforceRecord. ,// 401(k) - multipleLookupValues
+'fldBCM3yqMiN5oMfd': salesforceRecord. ,// 401(k) Carrier - multipleLookupValues
+'fldJIU2fX6tRoLKr4': salesforceRecord. ,// 401(k) Carriers - singleLineText
+'fldWc82EKQYe0bFNU': salesforceRecord. ,// 401(k) Connector? - checkbox
+'fldZF6GN4nVKWmTTo': salesforceRecord. ,// 401(k) copy - multipleRecordLinks
+'fldp5SMyNwxrHLqLj': salesforceRecord. ,// 401(k) Plan - multipleRecordLinks
+'fldm1llhgTq7QqRUx': salesforceRecord. ,// 401(k)? - multipleLookupValues
+'fldg5Iiy8VCDVjlES': salesforceRecord. ,// 45 Day Check In - checkbox
+'fld46rTweFxKapAQE': salesforceRecord. ,// 90 Day Check In - checkbox
+'fldmXu6b0hUW5UenF': salesforceRecord. ,// Account Created Date - date
+'fldVG2ZNOdpVmgCSm': salesforceRecord. ,// Account Name - singleLineText
+'fld5M2cnkUssQ8u7X': salesforceRecord. ,// Account Noloco View - formula
+'fldu5oDV5BXp5Jbc0': salesforceRecord. ,// Account Owner - multipleRecordLinks
+'fldOEHVAL34PKXfOL': salesforceRecord. ,// Account Record ID - formula
+'fldkyNhursVvpS3tc': salesforceRecord. ,// Account Status - singleSelect
+'fldn4HUUN64bAIFH7': salesforceRecord. ,// Account Timeline Horizontal HTML - New - formula
+'fldcIdUtdyJyL9992': salesforceRecord. ,// Account Type - singleSelect
+'fldxbDuRJpOvBxHAw': salesforceRecord. ,// Acronym - singleLineText
+'fldvGyuVaoIE6OcZS': salesforceRecord. ,// Additional Services - singleLineText
+'fldrv8iPfwFeuHk6L': salesforceRecord. ,// Ancillary Benefits - multipleRecordLinks
+'fld91UH2PTY3w9uCk': salesforceRecord. ,// Ancillary? - multipleLookupValues
+'fldAThMJ2EtPXLyLu': salesforceRecord. ,// App Feedback - multipleRecordLinks
+'fldhBzMWx4K8dt9Ua': salesforceRecord. ,// Assign Personnel - checkbox
+'fldM4dI8giCddOG9X': salesforceRecord. ,// Authorizations - multipleRecordLinks
+'fld6miqyoM6hAJzl0': salesforceRecord. ,// Banking Method - singleSelect
+'fld9rH1g72ivX6y7i': salesforceRecord. ,// Benefits - singleLineText
+'fldGjd5HBUDdg99yR': salesforceRecord. ,// Benefits copy - singleLineText
+'fldjg3ghnG5S0ch42': salesforceRecord. ,// Billing City - singleLineText
+'fldYSdUQM5JBfLRXQ': salesforceRecord. ,// Billing Street - multilineText
+'fldnCuUqKGmL6z6sn': salesforceRecord. ,// Billing Zip/Postal Code - singleLineText
+'fldQlYPYQT9HOBC6t': salesforceRecord. ,// Business Formation & Tax Notes - multilineText
+'fldJMCcWFb13wvvX0': salesforceRecord. ,// Business Type - singleSelect
+'fldzciAG2gH2UsWM8': salesforceRecord. ,// Cases - multipleRecordLinks
+'fldpQGjUU57YGP0SJ': salesforceRecord. ,// Child Accounts - multipleRecordLinks
+'fldxJaxWBs9MIEw11': salesforceRecord. ,// Child EIN - multipleLookupValues
+'fldqIm2Z9kP2GjtCw': salesforceRecord. ,// Client Anniversary - formula
+'fldrWXqRf178Rm9NB': salesforceRecord. ,// Client Health - formula
+'fldoyRbzvDL1g7SZi': salesforceRecord. ,// Client System ID - singleLineText
+'fldtQJEeeWFdClZCr': salesforceRecord. ,// Clients Dental - multipleRecordLinks
+'fld0Aj1CcKIDlTacg': salesforceRecord. ,// Commercial Auto? - checkbox
+'fldEb1v6abbrf0CNC': salesforceRecord. ,// Commission - multilineText
+'fld44nnf76D3wXw61': salesforceRecord. ,// Contract Date - date
+'fldg80t23YUidmb1k': salesforceRecord. ,// CRM Memo - richText
+'fldoW36xt5H1bzdkr': salesforceRecord. ,// Date Founded - date
+'fld3xAgkuk5578oGZ': salesforceRecord. ,// Days with Propel - formula
+'fldSn67A4ZllikzMK': salesforceRecord. ,// DBA - singleLineText
+'fldfEPWdK9Fv0oVgL': salesforceRecord. ,// Dental Benefits - multipleLookupValues
+'fld54wV28zHXF7PA2': salesforceRecord. ,// Dental Carrier - multipleLookupValues
+'flde2BXWUoxqY15YG': salesforceRecord. ,// Dental Connector? - checkbox
+'fldnx1MWwBCdfw4Em': salesforceRecord. ,// Directors & Officers Liability? - checkbox
+'fld2FUwdDZtoaxZ1S': salesforceRecord. ,// Documents - multipleRecordLinks
+'fldTN9npoWqrDurFJ': salesforceRecord. ,// EAP? - checkbox
+'fldXtW7gcbA1cg6Y5': salesforceRecord. ,// EE Estimate - number
+'fldyNOrvv1BAonQdi': salesforceRecord. ,// EEs Actual - count
+'fldETN93GEw9Rd8Q2': salesforceRecord. ,// Effective Date - date
+'fldHVBVpnpw50zsJt': salesforceRecord. ,// EIN - singleLineText
+'fldKhGXaEOpLZdNDB': salesforceRecord. ,// Email: Send Quote - formula
+'fldl8WzUfe5wL2tML': salesforceRecord. ,// Employee Data Import Form - multipleAttachments
+'fldanR5GCZj7zvmBI': salesforceRecord. ,// Employees - multipleRecordLinks
+'fldwGpJi1FRoMqPMS': salesforceRecord. ,// EPLI Insurance? - checkbox
+'fldp6Zif5l6pWCARb': salesforceRecord. ,// ETL Account Name (Delete) - singleLineText
+'fldoqOb1T3snCHhla': salesforceRecord. ,// Final Setup Fee - formula
+'fld7p6lB4S7Rb1SqN': salesforceRecord. ,// First Check Date - date
+'fldbmTaqrtEPouM7X': salesforceRecord. ,// Founded State - singleLineText
+'fld6m7njXGs3cxVZH': salesforceRecord. ,// Funding - multipleRecordLinks
+'fld9gQWaIgjHbEc7x': salesforceRecord. ,// General Liability? - checkbox
+'fldkGMnQb6s3KWwR0': salesforceRecord. ,// GHQ - singleLineText
+'fldh5Xbs1rwbcVwn7': salesforceRecord. ,// GHQ 2 - multipleRecordLinks
+'fldQOJujgVeUvA2x1': salesforceRecord. ,// Health Benefits - multipleRecordLinks
+'fldyBc2SO6H4KeqJC': salesforceRecord. ,// Health? - multipleLookupValues
+'fldjhv95jJKdpKmDm': salesforceRecord. ,// HR Services - multipleRecordLinks
+'fldkFfwYAhHrS9ZkQ': salesforceRecord. ,// HR? - multipleLookupValues
+'fld9xM4mMQZ0hYnpY': salesforceRecord. ,// HRIS Module - multipleRecordLinks
+'fldvwstmRsq5IX8XT': salesforceRecord. ,// HRIS? - checkbox
+'fldgM5qPw8PxGx1jt': salesforceRecord. ,// Implementation - singleLineText
+'fldgZqh23zJexFsx3': salesforceRecord. ,// Implementation Next Stage - formula
+'fldIVMInlojeoHDbx': salesforceRecord. ,// Implementation Stage - singleSelect
+'flduIJWUIiUcI44qq': salesforceRecord. ,// Implementation: Data Collection Progress - formula
+'fldNoWZaaqmMrJHl7': salesforceRecord. ,// Implementation: Data Collection Total Completed Task Count - count
+'fld3gaJGsXfSYtovX': salesforceRecord. ,// Implementation: Data Collection Total Task Count - count
+'fldexABDsBsgRxCwv': salesforceRecord. ,// Implementation: Onboarding Training Progress - formula
+'fldOxYoieuaR2wqCq': salesforceRecord. ,// Implementation: Onboarding Training Total Completed Task Count - count
+'fldANsg2Mn6zkohsv': salesforceRecord. ,// Implementation: Onboarding Training Total Task Count - count
+'fldbbqgkAtOE0i6Jm': salesforceRecord. ,// Implementation: Payroll History Progress - formula
+'fldhiE9339GzSdlsX': salesforceRecord. ,// Implementation: Payroll History Total Completed Task Count - count
+'fldQ6lIac1dYFqbr5': salesforceRecord. ,// Implementation: Payroll History Total Task Count - count
+'fldpehNUoF3aOJT7k': salesforceRecord. ,// Implementation: Payroll Training Total Completed Task Count - count
+'fldEMZw6R0XHfCqT7': salesforceRecord. ,// Implementation: Payroll Training Total Task Count - count
+'fldGJE7v5jIxPUDbV': salesforceRecord. ,// Implementation: System Building Progress - formula
+'fldWZej2dpVzAg38d': salesforceRecord. ,// Implementation: System Building Total Completed Task Count - count
+'fldKhkDa87TpkpFAK': salesforceRecord. ,// Implementation: System Building Total Task Count - count
+'fld0N7BBNBaSOCbj2': salesforceRecord. ,// Implementation: System Training Progress - formula
+'fldGcGDkrLKam0aDx': salesforceRecord. ,// Implementation: System Training Total Completed Task Count - count
+'fld6hhYTBkHvKufR6': salesforceRecord. ,// Implementation: System Training Total Task Count - count
+'fldLWQXAMpQsK7aMa': salesforceRecord. ,// Import Document Received? - lastModifiedTime
+'flddMoXpcdqBLhEhw': salesforceRecord. ,// Import Document Uploaded? - checkbox
+'fldNGIEslTciPKWdm': salesforceRecord. ,// Industry - singleSelect
+'fld97ihkWQbxnN3c0': salesforceRecord. ,// Insurance Carrier - singleLineText
+'fldyfCrYGDVr97sC0': salesforceRecord. ,// Intake Link - formula
+'fldPO2ngJzlvJiDLB': salesforceRecord. ,// Interactions - multipleRecordLinks
+'fldPiqZAxqGwTDT8R': salesforceRecord. ,// Job Costing? - checkbox
+'fldNziitje2BDAGdV': salesforceRecord. ,// Legal Name - singleLineText
+'fld8RizIFXUf3oU6g': salesforceRecord. ,// Life Insurance? - checkbox
+'fldAloC6RLbce6Zw4': salesforceRecord. ,// Locations - multipleRecordLinks
+'fldBjtNuYcfvDiaV5': salesforceRecord. ,// Mailto: Payroll Specialist - rollup
+'fldHu2tgdrCzYmcc7': salesforceRecord. ,// Main Phone - phoneNumber
+'fldsTt0SHOrYrqYGP': salesforceRecord. ,// Marketing Opt-In - checkbox
+'fldTCUKUpiVb84iE2': salesforceRecord. ,// Master 401(k) Plan - multipleRecordLinks
+'fldoICAFr7cIAWBtE': salesforceRecord. ,// Master 401(k)? - checkbox
+'fldQqoomSLZKEemtC': salesforceRecord. ,// Master Ancillary? - checkbox
+'fldbdLGYyx3pyWZOv': salesforceRecord. ,// Master Cobra? - checkbox
+'fldMDfd3sUslTvJqM': salesforceRecord. ,// Master Dental - multipleRecordLinks
+'fldozZtJPNh6iyrTu': salesforceRecord. ,// Master Dental? - checkbox
+'fldpzdodwKO01sGLv': salesforceRecord. ,// Master FSA/FHA? - checkbox
+'fldvQ5TiFB9o1Vs5o': salesforceRecord. ,// Master Major Medical? - checkbox
+'fldE6QvVuTAeF7oeN': salesforceRecord. ,// Master Vision? - checkbox
+'fld4xGWpAYnS7uyZL': salesforceRecord. ,// Master Workers Comp? - checkbox
+'fldWfuKMDrkd5yDas': salesforceRecord. ,// Medical Benefits - multipleLookupValues
+'fldGb53JUxQ3YQ44l': salesforceRecord. ,// Medical Carrier - multipleLookupValues
+'fld3eslE2Ytys6In3': salesforceRecord. ,// Medical Connector? - checkbox
+'fldGP7NfvPnoWK6QN': salesforceRecord. ,// Medicare? - checkbox
+'fldVsz4nnf3Gf2HfM': salesforceRecord. ,// Most Recent Quote Record ID - multipleLookupValues
+'fldj71VaPvaBBeASb': salesforceRecord. ,// Multi-EIN Formula - formula
+'fldkXv27pYEDdCkTC': salesforceRecord. ,// Multi-EIN? - singleSelect
+'fldSvXBkauEMwYyZm': salesforceRecord. ,// Multi-state? - formula
+'fldkiCm9y1TV1d9RY': salesforceRecord. ,// NAICS - multipleRecordLinks
+'fldGJUouAqhmTLYmF': salesforceRecord. ,// Non Master 401(k) Carrier - multipleRecordLinks
+'fldhXzVY5X39qMtXl': salesforceRecord. ,// Non Master 401(k) Option - singleSelect
+'fldzU3ATvGOCQQEgR': salesforceRecord. ,// Non Master Cobra Carrier - singleLineText
+'flda6TSq2g6norf3o': salesforceRecord. ,// Non Master Dental Carrier - singleLineText
+'fldJwuZfkByi0lA2o': salesforceRecord. ,// Non Master Dental Option - singleSelect
+'fldPCGuMTYXAV8Sxf': salesforceRecord. ,// Non Master FSA/FHA Provider - singleLineText
+'fldoYfNrzIea2i7dc': salesforceRecord. ,// Non Master Medical Carrier - singleLineText
+'fldLiXWIVDqBo8G0m': salesforceRecord. ,// Non Master Medical Option - singleSelect
+'fldvJzkN0z3qzqj25': salesforceRecord. ,// Non Master Vision Carrier - singleLineText
+'fldNAKiQsHXBJOKW8': salesforceRecord. ,// Non Master Vision Option - singleSelect
+'fld3lFrQpcMAJqfUm': salesforceRecord. ,// Non Master Workers Comp Carrier - singleLineText
+'fldGQNxG42XzUYJaJ': salesforceRecord. ,// Non Master Workers Comp Option - singleSelect
+'fldudin1sxdHdJuAQ': salesforceRecord. ,// Notes - multipleRecordLinks
+'fldy1ZgmAf8ead9Ou': salesforceRecord. ,// Notice of Termination Date - date
+'fld3KotGiA5FKh9qp': salesforceRecord. ,// Onboarding Base Record ID - multipleLookupValues
+'fldwlyTkuVqYovrPl': salesforceRecord. ,// Onboarding Portal Last Accessed (from Primary Contact) - multipleLookupValues
+'fldGVqNVmFBGbAW8a': salesforceRecord. ,// Onboarding Progress - rollup
+'fldiYWlg6fb1oZdrX': salesforceRecord. ,// Operations Stage - singleSelect
+'fldhyhwBgfqyBbXCY': salesforceRecord. ,// Opportunities - multipleRecordLinks
+'fldlZQWuZyjTtyglc': salesforceRecord. ,// Opportunity Form - formula
+'fldqxYCgoY7XkF3cX': salesforceRecord. ,// Opportunity Line Items - multipleRecordLinks
+'fldD5Ir2VJ4rT4uTE': salesforceRecord. ,// Override Setup Fee - currency
+'fldqsygpph9j5BP51': salesforceRecord. ,// Ownership - singleLineText
+'fldZwIUUbsYJvllTj': salesforceRecord. ,// Parent Account - multipleRecordLinks
+'fldoEOZr0jqu9AbDi': salesforceRecord. ,// Parent Account ID - singleLineText
+'fldCjWH2VxGWGOyuH': salesforceRecord. ,// Parent Formula - formula
+'fldgczf3YxIDsYnPI': salesforceRecord. ,// Parent? - singleSelect
+'fldiAmqBBtC6Nomet': salesforceRecord. ,// Partner - multipleRecordLinks
+'fldG5ZHEetXLEQ11x': salesforceRecord. ,// Payroll Cycles - multipleRecordLinks
+'fldYrU1OxE6bmhzi6': salesforceRecord. ,// Payroll History? - checkbox
+'fldsMFWMVnVfcdJKr': salesforceRecord. ,// Payroll Platform - singleSelect
+'fldrvINqjRAkHiPJh': salesforceRecord. ,// Payroll Services - multipleRecordLinks
+'fldWtU1wNiyLKDsmz': salesforceRecord. ,// Payroll Services copy - singleLineText
+'fldXvMRqsXNyAIKGw': salesforceRecord. ,// Payroll System Created Date - date
+'fldzHtad3QCKInjDg': salesforceRecord. ,// Payroll? - multipleLookupValues
+'fldX9ht2CjG2We7dI': salesforceRecord. ,// PEO? - multipleLookupValues
+'fld9LRryXVqSLFhou': salesforceRecord. ,// People - multipleRecordLinks
+'fld5xLXWDcgDtkToM': salesforceRecord. ,// PEPY - currency
+'fldQBOorZXTC1ZB1B': salesforceRecord. ,// PEPY by Pay Cycle - formula
+'fldq4rKw0Tif6GYI8': salesforceRecord. ,// Physical City - singleLineText
+'fldjgjr3AiFbJ8qAr': salesforceRecord. ,// Physical State - singleLineText
+'fldWAjTHwk0KiuAFf': salesforceRecord. ,// Physical Street - multilineText
+'fld8ujucvInEGeoCC': salesforceRecord. ,// Physical Zip/Postal Code - singleLineText
+'fldwPMbVgtQ9ApAhF': salesforceRecord. ,// Primary Contact: Email - multipleLookupValues
+'fldSBQoKu7cGoJIMq': salesforceRecord. ,// Primary Contact: Portal Magic Link - multipleLookupValues
+'fldtyKFkitNxuKuqa': salesforceRecord. ,// Primary Contact: Record ID - multipleLookupValues
+'fldTLN34LIzmc5LW2': salesforceRecord. ,// Professional Liability? - checkbox
+'fldEU9F3JL2tIGO0e': salesforceRecord. ,// Propel Pros - multipleRecordLinks
+'fldMRdAafxun5qcl7': salesforceRecord. ,// Property Insurance? - checkbox
+'fld1pOSn4Ve19wKqx': salesforceRecord. ,// Quote Builder Record ID - multipleLookupValues
+'fldsBt5KBy6UWoA0S': salesforceRecord. ,// Quote Link - multipleLookupValues
+'fldngi84qlU8NqmU5': salesforceRecord. ,// Quotes - multipleRecordLinks
+'fld3a0aTZOaqCPedY': salesforceRecord. ,// Quoting? - checkbox
+'fldxmpv4Km1lp5oqI': salesforceRecord. ,// Remote Employees? - checkbox
+'fld4qxKvTOaJaM02b': salesforceRecord. ,// Retirement Planning? - checkbox
+'fldUQWJoeIBC3JEcO': salesforceRecord. ,// Send Client Onboarding - checkbox
+'fld8bcw4HCBBbf1T1': salesforceRecord. ,// Send Multi-EIN - checkbox
+'fldse7KvDzUxqKJPf': salesforceRecord. ,// Setup Fee - formula
+'flduaeRFSpU0pzmn7': salesforceRecord. ,// SF Account ID - singleLineText
+'fldmaoWQN2w2AR5Ac': salesforceRecord. ,// Source - singleSelect
+'fldU0nvJmeWdJLhwC': salesforceRecord. ,// Startup? - checkbox
+'fldxvDbN8JS7LdQ20': salesforceRecord. ,// State Test - formula
+'fldXg8txJ9g0OsoI0': salesforceRecord. ,// State(s) - multipleSelects
+'fldxVboE8y9RrzBN5': salesforceRecord. ,// States - multipleRecordLinks
+'fld5YD0mHacg5701E': salesforceRecord. ,// States (from Tickets) - multipleLookupValues
+'fldBKeqH4Z9Cm0CNn': salesforceRecord. ,// States (from Tickets) Text - formula
+'fldSB4IqkWbTpByZh': salesforceRecord. ,// Status - singleSelect
+'fld9TYB3LFfI1vEXo': salesforceRecord. ,// System Created Date - createdTime
+'fldNRpdnYf4dsX0pH': salesforceRecord. ,// Tasks - multipleRecordLinks
+'fldc9IRt5ihoP56XE': salesforceRecord. ,// Taxes - multipleRecordLinks
+'fldN3IS0cNgvpJSO9': salesforceRecord. ,// Terminated Date - dateTime
+'fldMSnWyPw9rWG1xF': salesforceRecord. ,// Terminating Notice Date - dateTime
+'fld1dN7LCikQyBK0G': salesforceRecord. ,// Termination Status - singleSelect
+'fld9WIloUHNrP4NqP': salesforceRecord. ,// Tickets - multipleRecordLinks
+'fldiSmqF4wAJGS6Jx': salesforceRecord. ,// Tickets: Complete - count
+'fldNhr1bEuUgVm3Tl': salesforceRecord. ,// Tickets: Open - count
+'fldUpiCmi1StQLC6D': salesforceRecord. ,// Tickets: Total - count
+'fld38heX68HdcRB3L': salesforceRecord. ,// Time Logs - multipleRecordLinks
+'fldiglVTiZ0cbwnQ0': salesforceRecord. ,// TLM Module - multipleRecordLinks
+'fldWXUzIW18Bk39DT': salesforceRecord. ,// Update Account Information Form Link - formula
+'fld3reRfXfhHE0o2b': salesforceRecord. ,// Vision Benefits - multipleLookupValues
+'fldB4RY003ORdPlUM': salesforceRecord. ,// Vision Carrier - multipleLookupValues
+'fldeEodFnbiXFTMTM': salesforceRecord. ,// Vision Connector? - checkbox
+'fldvCgkhyQYFKpJxA': salesforceRecord. ,// W/C? - multipleLookupValues
+'fldi4aDbbPz0aihBf': salesforceRecord. ,// Website - url
+'fld8E2QTJFRhWt91c': salesforceRecord. ,// Website Button - button
+'fldsmIlE44bDboiRU': salesforceRecord. ,// Welcome Call Completed - lastModifiedTime
+'fldt5YJESLqzlrpgM': salesforceRecord. ,// Welcome Call Date - date
+'fldWaBVBWNuULrhoN': salesforceRecord. ,// Welcome Complete? - checkbox
+'fldhYPsA57KS1Za5L': salesforceRecord. ,// Workers Comp Rates - multipleLookupValues
+'fldX5iyyfH72szihM': salesforceRecord. ,// Workers Compensation - multipleRecordLinks
+'fldDGgtfW5HSDtxEd': salesforceRecord. ,// 🚫 Link to Synced Implementation Base - singleLineText
+'fldHZ3pwmgZdVAqgv': salesforceRecord. ,// 🚫Link to Onboarding Sync - multipleRecordLinks

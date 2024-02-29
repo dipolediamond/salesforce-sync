@@ -1,0 +1,12 @@
+'fldtJCJygfsQLeALt': salesforceRecord. ,// Account - multipleRecordLinks
+'fldc2gDWBmjOSLyL7': salesforceRecord. ,// Account Record ID - multipleLookupValues
+'fld7YraYDnlghHTDM': salesforceRecord. ,// Contact - multipleRecordLinks
+'fld3xP6yYHZ30l8Yy': salesforceRecord. ,// Created - createdTime
+'flddsdCEIHpDqI3E9': salesforceRecord. ,// Description - multilineText
+'fldIZnPh0JKm70SWk': salesforceRecord. ,// Last Updated - lastModifiedTime
+'fldck4bCLIHqBD8mF': salesforceRecord. ,// Name - formula
+'fldfDPnhgNUn5gBU9': salesforceRecord. ,// Number - autoNumber
+'fldKIAbtkE0A7SoNR': salesforceRecord. ,// Owner - multipleRecordLinks
+'fldrHy8d2Fmr0zz81': salesforceRecord. ,// Status - singleSelect
+'fldqy8lP1bS76vZrH': salesforceRecord. ,// Subject - singleLineText
+'fldMIUGLe35lhzaoN': salesforceRecord. ,// Type - singleSelect
